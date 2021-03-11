@@ -25,30 +25,19 @@ public enum Planets {
         this.ratio = ratio;
     }
 
+    public double getRatio() {
+        return ratio;
+    }
+
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a weight: ");
         double weight = input.nextDouble();
-        System.out.println("On Mercury you have this weight : " + weight * MERCURY.ratio);
-        System.out.println("On Venus you have this weight : " + weight * VENUS.ratio);
-        System.out.println("On Moon you have this weight : " + weight * MOON.ratio);
-        System.out.println("On Mars you have this weight : " + weight * MARS.ratio);
-        System.out.println("On Jupiter you have this weight : " + weight * JUPITER.ratio);
-        System.out.println("On Saturn you have this weight : " + weight * SATURN.ratio);
-        System.out.println("On Uranus you have this weight : " + weight * URANUS.ratio);
-        System.out.println("On Neptune you have this weight : " + weight * NEPTUNE.ratio);
-        System.out.println("On Pluto you have this weight : " + weight * PLUTO.ratio);
-        System.out.println("On IO you have this weight : " + weight * IO.ratio);
-        System.out.println("On Europa you have this weight : " + weight * EUROPA.ratio);
-        System.out.println("On Ganymede you have this weight : " + weight * GANYMEDE.ratio);
-        System.out.println("On Callisto you have this weight : " + weight * CALLISTO.ratio);
-        System.out.println("On Sun you have this weight : " + weight * SUN.ratio);
-        System.out.println("On White Dwarf you have this weight : " + weight * WHITE_DWARF.ratio);
+
+        for (Planets planets : Planets.values())
+            System.out.printf("Your weight on %s is %f%n", planets, planets.ratio * weight);
 
     }
 
-    public double getRatio() {
-        return ratio;
-    }
 }
