@@ -32,7 +32,7 @@ public enum Planets {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter a weight: ");
+        System.out.print("Enter your weight on Earth: ");
         double weight = input.nextDouble();
 
         for (Planets planets : Planets.values())
