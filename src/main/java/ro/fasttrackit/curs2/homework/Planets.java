@@ -1,8 +1,6 @@
 package ro.fasttrackit.curs2.homework;
 
-import java.util.Optional;
 import java.util.Scanner;
-import java.util.stream.Stream;
 
 public enum Planets {
     MERCURY(0.3),
@@ -27,10 +25,6 @@ public enum Planets {
         this.ratio = ratio;
     }
 
-    public double getRatio() {
-        return ratio;
-    }
-
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -52,5 +46,9 @@ public enum Planets {
         System.out.println("On Sun you have this weight : " + weight * SUN.ratio);
         System.out.println("On White Dwarf you have this weight : " + weight * WHITE_DWARF.ratio);
 
+    }
+
+    public double getRatio() {
+        return ratio;
     }
 }
